@@ -19,7 +19,7 @@ export class CSVParser implements ComponentFramework.StandardControl<IInputs, IO
 
         this.button = document.createElement('button');
         this.button.className = 'primary-button';
-        this.button.innerText = this.context.parameters.label.raw ?? 'Upload CSV';
+        this.button.innerText = this.context.parameters.Label.raw ?? 'Parse CSV';
         this.button.addEventListener('click', () => document.getElementById('fileInput')?.click());
         this.container.appendChild(this.button);
 
@@ -34,13 +34,14 @@ export class CSVParser implements ComponentFramework.StandardControl<IInputs, IO
 
     public updateView(context: ComponentFramework.Context<IInputs>): void
     {
-        // Add code to update control view
+        this.context = context;
+        this.button.innerText = this.context.parameters.Label.raw ?? 'Parse CSV';
     }
 
     public getOutputs(): IOutputs
     {
         return {
-            value: this.jsonOutput
+            Value: this.jsonOutput
         };
     }
 
