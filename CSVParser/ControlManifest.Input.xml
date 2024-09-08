@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="FluentCustom" constructor="CSVParser" version="0.0.1" display-name-key="CSVParser" description-key="CSVParser description" control-type="standard" >
+    <external-service-usage enabled="false"/>
+    <property name="label" display-name-key="Label" description-key="The label of the button" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="value" display-name-key="Value" description-key="The output json string generated from the uploaded CSV file" of-type="SingleLine.Text" usage="output" required="false" />
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="css/styles.css" order="1"/>
+    </resources>
+  </control>
+</manifest>
