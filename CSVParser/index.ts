@@ -25,6 +25,7 @@ export class CSVParser implements ComponentFramework.StandardControl<IInputs, IO
 
         this.fileInput = document.createElement('input');
         this.fileInput.type = 'file';
+        this.fileInput.accept = '.csv';
         this.fileInput.id = 'fileInput';
         this.fileInput.addEventListener('change', this.handleFileUpload.bind(this));
         this.container.appendChild(this.fileInput);
