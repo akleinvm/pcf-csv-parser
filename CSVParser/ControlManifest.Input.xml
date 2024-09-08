@@ -6,7 +6,10 @@
     <property name="value" display-name-key="Value" description-key="The output json string generated from the uploaded CSV file" of-type="SingleLine.Text" usage="output" required="false" />
     <resources>
       <code path="index.ts" order="1"/>
-      <css path="css/styles.css" order="1"/>
+      <css path="css/button.css" order="1"/>
+      <css path="css/flexContainer.css" order="2"/>
+      <css path="css/textContainer.css" order="3"/>
+      <css path="css/label.css" order="4"/>
     </resources>
   </control>
 </manifest>
