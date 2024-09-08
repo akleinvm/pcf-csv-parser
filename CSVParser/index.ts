@@ -7,7 +7,7 @@ export class CSVParser implements ComponentFramework.StandardControl<IInputs, IO
     private container: HTMLDivElement;
     private button: HTMLButtonElement;
     private fileInput: HTMLInputElement;
-    private jsonOutput: Object;
+    private jsonOutput: string;
 
     constructor(){}
 
@@ -39,7 +39,7 @@ export class CSVParser implements ComponentFramework.StandardControl<IInputs, IO
     public getOutputs(): IOutputs
     {
         return {
-            value: this.jsonOutput.toString()
+            value: this.jsonOutput
         };
     }
 
@@ -58,11 +58,12 @@ export class CSVParser implements ComponentFramework.StandardControl<IInputs, IO
                     header: true,
                     complete: (result) => {
                         console.log(result.data);
-                        this.jsonOutput = result.data;
+                        this.jsonOutput = JSON.stringify(result.data);
                         this.notifyOutputChanged();
                     }
                 })
             }
+            reader.readAsText(file);
         }
     }
 }
