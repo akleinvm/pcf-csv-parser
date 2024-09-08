@@ -51,19 +51,14 @@ export class CSVParser implements ComponentFramework.StandardControl<IInputs, IO
     private handleFileUpload (event: Event): void {
         const file = (event.target as HTMLInputElement).files?.[0];
         if (file) {
-            const reader = new FileReader();
-            reader.onload = () => {
-                const csvData = reader.result as string;
-                Papa.parse(csvData, {
-                    header: true,
-                    complete: (result) => {
-                        console.log(result.data);
-                        this.jsonOutput = JSON.stringify(result.data);
-                        this.notifyOutputChanged();
-                    }
-                })
-            }
-            reader.readAsText(file);
+            Papa.parse(file, {
+                header: true,
+                complete: (result) => {
+                    console.log(result.data);
+                    this.jsonOutput = JSON.stringify(result.data);
+                    this.notifyOutputChanged();
+                }
+            })
         }
     }
 }
