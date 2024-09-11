@@ -1,9 +1,9 @@
-button {
+.FluentUICustom button {
     font-family: "Segoe UI", sans-serif;
     font-size: 14px;
 }
   
-.primary-button {
+.FluentUICustom .primary-button {
     color: white;
     font-weight: 600;
     background-color: #0078d4;
@@ -20,16 +20,16 @@ button {
     text-align: center;
 }
   
-.primary-button:hover {
+.FluentUICustom .primary-button:hover {
     background-color: #005ba1;
     cursor: pointer; 
 }
   
-.primary-button:active {
+.FluentUICustom .primary-button:active {
     background-color: #0894ff;
 }
   
-.default-button {
+.FluentUICustom .default-button {
     color: white;
     background-color: transparent;
     border: 1px solid white;
@@ -39,26 +39,26 @@ button {
     outline: none;
 }
   
-.default-button:hover {
+.FluentUICustom .default-button:hover {
     background-color: #0078d4;
     border: 1px solid #0078d4;
 }
   
-.default-button:active {
+.FluentUICustom .default-button:active {
     background-color: #005ba1;
 }
     
-input[type="textarea"] {
+.FluentUICustom input[type="textarea"] {
     border: 1px solid #ccc;
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
 }
     
-input[type="file"] {
+.FluentUICustom input[type="file"] {
     display: none;
 }
   
-div {
+.FluentUICustom div {
     border: none
 }
